@@ -7,7 +7,7 @@ const {app, BrowserWindow} = require('electron')
 let mainWindow
 
 function createWindow () {
-  
+
   let display = electron.screen.getPrimaryDisplay()
   let displayWidth = display.bounds.width
   let screenWidth = 315
@@ -18,7 +18,9 @@ function createWindow () {
     height: screenWidth,
     x: displayWidth - 560,
     y: 0,
-    frame: false
+    frame: false,
+    minimizable: false,
+    maximizable: false
   })
 
   // and load the index.html of the app.
